@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>First Dollar Millionaire of Donations</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            text-align: center;
+        }
+        header {
+            background-color: #4CAF50;
+            color: white;
+            padding: 20px;
+        }
+        h1 {
+            font-size: 2.5em;
+            margin: 0;
+        }
+        .progress-bar {
+            width: 80%;
+            background-color: #ddd;
+            margin: 20px auto;
+            height: 30px;
+            border-radius: 15px;
+            overflow: hidden;
+        }
+        .progress {
+            width: 10%; /* Update this dynamically */
+            background-color: #4CAF50;
+            height: 100%;
+            line-height: 30px;
+            color: white;
+            text-align: center;
+        }
+        .wallets {
+            margin: 30px auto;
+        }
+        .wallet {
+            margin: 10px 0;
+        }
+        .wallet button {
+            margin-left: 10px;
+            padding: 5px 10px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+        .memes img {
+            max-width: 80%;
+            margin: 20px auto;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>First Dollar Millionaire of Donations</h1>
+    <p>Help me become the first donation millionaire. Be part of history!</p>
+</header>
+
+<div class="progress-bar">
+    <div class="progress">10%</div> <!-- Update dynamically with donations -->
+</div>
+
+<section class="wallets">
+    <h2>Donate Here</h2>
+    <div class="wallet">
+        <p>Ethereum: 0xED8fEcaDbA12Fa75c4a9C33C9D56723dEcCd5C8B <button onclick="copyText('eth')">Copy Address</button></p>
+    </div>
+    <div class="wallet">
+        <p>Bitcoin: bc1p35vs5vzzm8n7u9m6ts9cystla9wxdussv40hl7w04ucskcq9hs2s79ct78 <button onclick="copyText('btc')">Copy Address</button></p>
+    </div>
+    <div class="wallet">
+        <p>Solana: 7Wu9Cy8iDWvJCkxEkuLjbKwua3p9DoCSnSSp3oZy86iw <button onclick="copyText('sol')">Copy Address</button></p>
+    </div>
+</section>
+
+<section class="memes">
+    <h2>Check Out These Memes!</h2>
+    <img src="/path/to/meme1.png" alt="Meme 1">
+    <img src="/path/to/meme2.png" alt="Meme 2">
+    <img src="/path/to/meme3.png" alt="Meme 3">
+</section>
+
+<script>
+    function copyText(walletType) {
+        let text = '';
+        if(walletType === 'eth') text = '0xED8fEcaDbA12Fa75c4a9C33C9D56723dEcCd5C8B';
+        if(walletType === 'btc') text = 'bc1p35vs5vzzm8n7u9m6ts9cystla9wxdussv40hl7w04ucskcq9hs2s79ct78';
+        if(walletType === 'sol') text = '7Wu9Cy8iDWvJCkxEkuLjbKwua3p9DoCSnSSp3oZy86iw';
+        navigator.clipboard.writeText(text);
+        alert(walletType.toUpperCase() + ' address copied to clipboard!');
+    }
+</script>
+
+</body>
+</html>
